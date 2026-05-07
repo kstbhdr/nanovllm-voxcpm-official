@@ -481,11 +481,9 @@ class BaseModelRunner:
                 )
 
         available_budget = total * self._config.gpu_memory_utilization - peak
-        available_physical = free + (reserved - current) - (peak - current)
+        available_physical = free + (reserved - current)
         available_for_kv = min(available_budget, available_physical)
         self._config.num_kvcache_blocks = int(available_for_kv) // total_attention_block_size
-        assert self._config.num_kvcache_blocks > 0
-
         for module in self.model.modules():
             if isinstance(module, Attention) and module.is_causal:
                 module.k_cache = torch.empty(

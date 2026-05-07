@@ -1,4 +1,6 @@
-# Nano-vLLM-VoxCPM
+# Nano-vLLM-VoxCPM 🎤
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/a710128/nanovllm-voxcpm/blob/main/colab_voxcpm2_inference.ipynb)
 
 An inference engine for VoxCPM based on Nano-vLLM.
 
@@ -8,6 +10,41 @@ Features:
 - Friendly async API (can be wrapped by an HTTP server; see `deployment/README.md`)
 
 This repository contains a Python package (`nanovllm_voxcpm/`) plus an optional FastAPI demo.
+
+## 🚀 Quick Start
+
+### 🧪 Colab'da Çalıştır (Ücretsiz GPU)
+
+Tek tıkla Colab'da aç ve çalıştır:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/a710128/nanovllm-voxcpm/blob/main/colab_voxcpm2_inference.ipynb)
+
+Ya da manuel:
+1. `colab_voxcpm2_inference.ipynb` dosyasını Colab'a yükle (File → Upload Notebook)
+2. Runtime → Change runtime type → **T4 GPU** seç
+3. Sırayla tüm hücreleri çalıştır
+
+### 🐳 Docker ile Çalıştır
+
+```bash
+# Build
+docker build -f Dockerfile.inference -t voxcpm2-inference .
+
+# Run (model otomatik indirilir)
+docker run --gpus all --rm -it voxcpm2-inference
+
+# Docker Hub'a push (kendi repo'na)
+# docker tag voxcpm2-inference <kullanici>/voxcpm2-inference
+# docker push <kullanici>/voxcpm2-inference
+```
+
+### 💻 WSL/Local'da Çalıştır
+
+```bash
+python voxcpm2_run.py
+```
+
+---
 
 ## Installation
 

@@ -1,0 +1,12 @@
+torch>=2.5.0,!=2.6.*
+triton>=3.0.0
+transformers>=4.51.0
+flash-attn
+xxhash
+torchaudio
+tqdm
+numpy
+librosa
+pydantic
+soundfile>=0.13.1
+torchcodec
