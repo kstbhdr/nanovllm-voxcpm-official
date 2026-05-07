@@ -1,6 +1,6 @@
 # Nano-vLLM-VoxCPM 🎤
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/a710128/nanovllm-voxcpm/blob/main/colab_voxcpm2_inference.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kstbhdr/nanovllm-voxcpm-official/blob/main/colab_voxcpm2_inference.ipynb)
 
 An inference engine for VoxCPM based on Nano-vLLM.
 
@@ -17,7 +17,7 @@ This repository contains a Python package (`nanovllm_voxcpm/`) plus an optional 
 
 Tek tıkla Colab'da aç ve çalıştır:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/a710128/nanovllm-voxcpm/blob/main/colab_voxcpm2_inference.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kstbhdr/nanovllm-voxcpm-official/blob/main/colab_voxcpm2_inference.ipynb)
 
 Ya da manuel:
 1. `colab_voxcpm2_inference.ipynb` dosyasını Colab'a yükle (File → Upload Notebook)
