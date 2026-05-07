@@ -209,3 +209,7 @@ uv.lock
 # Opencode
 /.memory
 /models
+
+# Build artifacts
+*.tar.gz
+release/
