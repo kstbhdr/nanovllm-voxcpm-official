@@ -42,7 +42,7 @@ run([PY, "-m", "pip", "install", "transformers>=4.51.0", "soundfile", "librosa",
 
 # 4. Fork'u kur (VRAM fix dahil)
 REPO = "https://github.com/kstbhdr/nanovllm-voxcpm-official"
-WORK = "/content/nanovllm-voxcpm-official" if "colab" in sys.modules else "/tmp/nanovllm-voxcpm"
+WORK = "/content/nanovllm-voxcpm-official" if os.path.isdir("/content") else "/tmp/nanovllm-voxcpm"
 if not os.path.exists(WORK):
     subprocess.run(["git", "clone", REPO, WORK, "--depth=1"], capture_output=True)
 os.chdir(WORK)
