@@ -10,3 +10,4 @@ librosa
 pydantic
 soundfile>=0.13.1
 torchcodec
+psutil

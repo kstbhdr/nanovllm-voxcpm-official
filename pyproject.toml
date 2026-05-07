@@ -26,7 +26,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage="https://github.com/a710128/nanovllm-voxcpm"
+Homepage="https://github.com/kstbhdr/nanovllm-voxcpm-official"
 
 [tool.setuptools]
 license-files = ["LICENSE"]
