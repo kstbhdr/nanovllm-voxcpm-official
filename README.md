@@ -27,15 +27,13 @@ Ya da manuel:
 ### 🐳 Docker ile Çalıştır
 
 ```bash
-# Build
-docker build -f Dockerfile.inference -t voxcpm2-inference .
+# Docker Hub'dan çek (build yapmadan)
+docker pull bahadir26/voxcpm2
+docker run --gpus all --rm -it bahadir26/voxcpm2
 
-# Run (model otomatik indirilir)
-docker run --gpus all --rm -it voxcpm2-inference
-
-# Docker Hub'a push (kendi repo'na)
-# docker tag voxcpm2-inference <kullanici>/voxcpm2-inference
-# docker push <kullanici>/voxcpm2-inference
+# Ya da local build
+docker build -f Dockerfile.inference -t voxcpm2 .
+docker run --gpus all --rm -it voxcpm2
 ```
 
 ### 💻 WSL/Local'da Çalıştır
