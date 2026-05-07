@@ -10,6 +10,9 @@ set -euo pipefail
 IMAGE_NAME="voxcpm2-inference"
 DOCKER_HUB_USER="${DOCKER_HUB_USER:-}"  # export DOCKER_HUB_USER=kullaniciadin
 
+# Colab için NOT: Colab Docker çalıştırmaz.
+# Bu image'i cloud GPU (GCP/AWS/RunPod) veya kendi sunucunda kullan.
+
 echo "=========================================="
 echo "  VoxCPM2 Docker Build"
 echo "=========================================="
