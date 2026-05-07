@@ -8,6 +8,10 @@ import sys
 import importlib
 import os
 
+# Windows cp1254 terminalinde emoji hatasini onlemek icin
+if sys.platform == "win32" and sys.stdout.encoding != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # type: ignore
+
 REQUIRED_PKGS = [
     ("torch", "torch>=2.5.1"),
     ("flash_attn", "flash-attn"),
