@@ -5,8 +5,10 @@ set -e
 echo "=== VoxCPM2 WSL Kurulum ==="
 cd "$(dirname "$0")"
 
-# Sanal ortam
-[ ! -d venv ] && python3.10 -m venv venv
+# Sanal ortam (Python >=3.10,<3.13 gerekli)
+PYTHON=$(command -v python3.12 || command -v python3.11 || command -v python3.10 || echo "python3")
+echo "Kullanilan Python: $($PYTHON --version)"
+[ ! -d venv ] && $PYTHON -m venv venv
 source venv/bin/activate
 
 # Bagimliliklar
